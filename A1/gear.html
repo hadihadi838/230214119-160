@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify Gear</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      background: #111827;
+      color: #fff;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.7);
+    }
+    .logo { font-size: 1.25rem; font-weight: bold; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: #fff; transition: color .2s; }
+    nav a:hover { color: #22d3ee; }
+    .search-and-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .search-and-icons input {
+      padding: 0.4rem 0.75rem;
+      border: none;
+      border-radius: 4px;
+      background: #1f2937;
+      color: #fff;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1f2937;
+    }
+    .page-title h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .page-title p { color: #9ca3af; }
+
+    /* Product Grid */
+    .products {
+      display: grid;
+      gap: 1.5rem;
+      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .product-card {
+      background: #1f2937;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 1rem;
+    }
+    .product-info h2 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+    .product-info p {
+      font-size: 0.875rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+    .product-info .price {
+      color: #22d3ee;
+      font-weight: bold;
+    }
+    .product-info button {
+      background: #22d3ee;
+      border: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .product-info button:hover {
+      background: #67e8f9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.8);
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.75rem;
+        flex-wrap: wrap;
+      }
+      .search-and-icons {
+        margin-top: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">SPORTIFY</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gear.html" style="color:#22d3ee;">Gear</a>
+      <a href="brands.html">Brands</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-and-icons">
+      <input type="text" placeholder="Search gear...">
+      <span class="material-icons" style="cursor:pointer;">account_circle</span>
+      <span class="material-icons" style="cursor:pointer;">shopping_cart</span>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <h1>Explore Our Gear</h1>
+    <p>Top-quality sports and fitness gear at unbeatable prices</p>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Running Shoes">
+      <div class="product-info">
+        <h2>Running Shoes</h2>
+        <p>High-performance shoes designed for runners of all levels.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">$89.99</span>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1" alt="Dumbbells">
+      <div class="product-info">
+        <h2>Dumbbells</h2>
+        <p>Premium dumbbells for strength and endurance training.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">$59.99</span>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55" alt="Football">
+      <div class="product-info">
+        <h2>Football</h2>
+        <p>Durable football with excellent grip and control.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">$29.99</span>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <img src="https://plus.unsplash.com/premium_photo-1667250493220-d154cebdfc68" alt="Yoga Mat">
+      <div class="product-info">
+        <h2>Yoga Mat</h2>
+        <p>Eco-friendly and non-slip yoga mat for all your poses.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">$24.99</span>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sportify. All rights reserved.
+  </footer>
+
+</body>
+</html>
