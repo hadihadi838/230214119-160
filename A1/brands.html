@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportify Brands</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      background: #111827;
+      color: #fff;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.7);
+    }
+    .logo { font-size: 1.25rem; font-weight: bold; }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      transition: color .2s;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #22d3ee;
+    }
+    nav a.active {
+      color: #22d3ee;
+      font-weight: 600;
+    }
+    .search-icons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .search-icons input {
+      padding: 0.4rem 0.75rem;
+      border: none;
+      border-radius: 4px;
+      background: #1f2937;
+      color: #fff;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #1f2937;
+    }
+    .page-title h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .page-title p { color: #9ca3af; }
+
+    /* Brands Grid */
+    .brands {
+      display: grid;
+      gap: 1.5rem;
+      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .brand-card {
+      background: #1f2937;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .brand-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .brand-card img {
+      max-height: 80px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .brand-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .brand-card p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+    .brand-card a {
+      color: #22d3ee;
+      font-weight: 500;
+      transition: text-decoration .2s;
+    }
+    .brand-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.8);
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin: 0.75rem 0;
+        flex-wrap: wrap;
+      }
+      .search-icons {
+        margin-top: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">SPORTIFY</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gear.html">Gear</a>
+      <a href="brands.html" class="active">Brands</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-icons">
+      <input type="text" placeholder="Search brands...">
+      <span class="material-icons" style="cursor:pointer;">account_circle</span>
+      <span class="material-icons" style="cursor:pointer;">shopping_cart</span>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <h1>Top Sports Brands</h1>
+    <p>Browse and shop by your favorite sportswear and equipment brands</p>
+  </section>
+
+  <!-- Brands Grid -->
+  <section class="brands">
+    <!-- Nike -->
+    <div class="brand-card">
+      <img src="https://1000logos.net/wp-content/uploads/2017/03/Nike-Logo.png" alt="Nike">
+      <h2>Nike</h2>
+      <p>Iconic performance wear for athletes and lifestyle enthusiasts.</p>
+      <a href="#">Shop Nike</a>
+    </div>
+
+    <!-- Adidas -->
+    <div class="brand-card">
+      <img src="https://1000logos.net/wp-content/uploads/2016/10/Adidas-Logo.png" alt="Adidas">
+      <h2>Adidas</h2>
+      <p>Innovative gear that fuels professional and amateur athletes.</p>
+      <a href="#">Shop Adidas</a>
+    </div>
+
+    <!-- Under Armour -->
+    <div class="brand-card">
+      <img src="https://images.unsplash.com/photo-1576020111958-bff2cf17226d?w=500" alt="Under Armour">
+      <h2>Under Armour</h2>
+      <p>Gear engineered for peak performance in any sport.</p>
+      <a href="#">Shop UA</a>
+    </div>
+
+    <!-- Puma -->
+    <div class="brand-card">
+      <img src="https://images.unsplash.com/photo-1633523154731-d131470565d7?w=500" alt="Puma">
+      <h2>Puma</h2>
+      <p>Bold, fast, and fashion-forward sportswear and gear.</p>
+      <a href="#">Shop Puma</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sportify. All rights reserved.
+  </footer>
+
+</body>
+</html>
